@@ -1,5 +1,5 @@
 FROM alpine:3.14
-MAINTAINER MJMAN
+LABEL description="SocaTorSSL"
 
 RUN mkdir -p /etc/socatorssl
 ADD ./tor-socat.sh /etc/socatorssl/tor-socat.sh
