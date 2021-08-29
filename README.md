@@ -29,11 +29,11 @@ Eg. BlueWallet Android -> Umbrel Node
 
 ##### build
 
-    docker build -t mjman/socatorssl .
+    docker build -t damanic/socatorssl .
 
 ##### push
 
-    docker push mjman/socatorssl
+    docker push damanic/socatorssl
 
 ##### Start the image in background (*daemon mode*) :
 
@@ -46,7 +46,7 @@ Eg. BlueWallet Android -> Umbrel Node
         -e "SSL_KEY=key.pem" \
         --name socator \
         --mount type=bind,source=/path/to/ssl/certificate,target=/etc/socatorssl/certs/ \
-        mjman/socatorssl
+        damanic/socatorssl
 
 You can now access the tor hidden service via https://yourdomain.com:5100
 
