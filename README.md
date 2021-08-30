@@ -27,18 +27,18 @@ Host a proxy service to allow a device that has problems connecting over TOR to 
 Eg. BlueWallet Android -> Umbrel Node
 
 
-##### pull
+##### Pull
 
     docker pull damanic/socatorssl
 
-##### Run: Start the image in background (*daemon mode*) :
+##### Run
 
 In the following example  `/path/to/ssl/certificate` points to the host directory that contains your SSL certificates
     
     docker run -d \
         -p 5100:5100 \
         -e "PUBLIC_PORT=5100" \
-        -e "TOR_SITE=zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad.onion" \
+        -e "TOR_SITE=23eqduMyfAkeafs4awr2314d.onion" \
         -e "TOR_SITE_PORT=50001" \
         -e "SSL_CERT=cert.pem" \
         -e "SSL_KEY=key.pem" \
@@ -47,7 +47,5 @@ In the following example  `/path/to/ssl/certificate` points to the host director
         damanic/socatorssl
 
 You can now access the tor hidden service via https://yourdomain.com:5100
-
-Remove the`SSL_*` environment variables and `--mount` to expose the proxy over PLAIN HTTP
 
 ----------------
